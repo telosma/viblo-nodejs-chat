@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login page</title>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+	<div id="nickWrap">
+		<p>Tai khoan dang nhap cua ban:</p>
+		<p id="nickErorr"></p>
+		<p id="loginOk"></p>	
+		<form id="setNick">
+			<input size="35" id="nickName"></input>
+			<input type="submit"></input>
+		</form>
+	</div>
+	<script>
+		$('#setNick').submit(function(e){
+				e.preventDefault();
+				socket.emit('new user', $('#setNick').val(), function(data){
+					if (data){
+						$('#loginOk').html('Dang nhap thanh cong');
+
+					}else{
+						$('#nickErorr').html('Tai khoan da duoc su dung. Vui long dien tai khoan khac');
+					}
+				});
+				$nickBox.val('');
+			});
+	</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="facivon.ico">
+
+    <title>awesomechat</title>
+    <link href="style.css" rel="stylesheet">
+    <!-- Load module socket.io vao client side -->
+    <script src="/socket.io/socket.io.js"></script> 
+    <script
+			  src="https://code.jquery.com/jquery-2.2.2.min.js"
+			  integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="
+			  crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+  <div id="nickWrap">
+		<p>Tai khoan dang nhap cua ban:</p>
+		<p id="nickErorr"></p>	
+		<form id="setNick" name="fname">
+			<input size="35" id="nickName" name="fvalue"></input>
+			<input type="submit"></input>
+		</form>
+	</div>
+
+  <div class="chat_box">
+	<div class="chat_head"> Chat Box</div>
+	<div class="chat_body">
+	</div>
+  </div>
+
+<div class="msg_box" style="right:290px; display:none">
+	<div class="msg_head">
+	<span id="box_name" name=""></span>
+	<div class="close">x</div>
+	</div>
+	<div class="msg_wrap">
+		<div class="msg_body">
+			<div class="msg_push"></div>
+		</div>
+	<div class="msg_footer"><textarea class="msg_input" rows="4"></textarea></div>
+</div>
+</div>
+</body>
+</html>
