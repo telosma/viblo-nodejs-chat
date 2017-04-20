@@ -2,16 +2,8 @@ var express = require('express'),
 	app = express(),
 	server = require('http').createServer(app),
 	io = require('socket.io').listen(server),
-	mongoose = require('mongoose');
 	users = {};
-server.listen(8888);
-// mongoose.connect('mongodb://localhost/posts', function(err){
-// 	if(err){
-// 		console.log('Khong the ket noi Mongodb');
-// 	}else{
-// 		console.log('Da ket noi voi Mongodb');
-// 	}
-// });
+sv.listen(process.env.PORT || 5000);
 
 app.use(express.static(__dirname + '/public'));
 app.get('/', function(req, res){
